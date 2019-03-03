@@ -69,6 +69,138 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Reflection" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/securityportfolio/2019/03/03/Reflection/" class="article-date">
+  <time datetime="2019-03-02T22:27:43.000Z" itemprop="datePublished">2019-03-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/securityportfolio/2019/03/03/Reflection/">Reflection</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Reflective-Statement"><a href="#Reflective-Statement" class="headerlink" title="Reflective Statement"></a>Reflective Statement</h2><h4 id="1-Engage-with-stakeholders-to-identify-a-problem"><a href="#1-Engage-with-stakeholders-to-identify-a-problem" class="headerlink" title="1. Engage with stakeholders to identify a problem"></a>1. Engage with stakeholders to identify a problem</h4><p>There were a good handful of stakeholders I involved myself with in the course of the studio. Mostly these were guests of the facilitating staff and industry professionals, who introduced us to concepts, tools, and methods that we used in solving a problem, whether given by them or self-defined.</p>
+<p>Any of the guests could be mentioned, Ruben gave us problems such as how to find something within a program when the element itself is never explicitly stated, this was solved through the process of program reverse engineering and, while I don’t consider myself skilled at it, I was able to solve this issue with a few of the challenges he provided.</p>
+<p><img src="/securityportfolio/images/week4/re1callfunction.png" alt="From the reverse engineering demo/presentation"><br>Things like the presentations on web vulnerabilities and tools used in penetration testing served to engage us with stakeholders with a given problem and associate our topic with the business aspects, meaning we had to evaluate what the needs of the stakeholder were and what specifically they desired from the presentation and the details they requested.</p>
+<p>Practical experience was valued above all else within this studio, so any involvement with stakeholders was generally involved a certain level of technical understanding to grasp how different elements could be used to leverage a system, demoing of exploits and explaining vulnerabilities was not only done by students, but by staff and guests as well, properly understanding what was being discussed, taking notes and replicating the findings were important in solving the issuing and furthering progress.</p>
+<h4 id="2-Apply-design-thinking-or-systems-thinking-to-respond-to-a-defined-or-newly-identified-problem"><a href="#2-Apply-design-thinking-or-systems-thinking-to-respond-to-a-defined-or-newly-identified-problem" class="headerlink" title="2. Apply design thinking or systems thinking to respond to a defined or newly identified problem"></a>2. Apply design thinking or systems thinking to respond to a defined or newly identified problem</h4><p>Research and understanding up a large portion of the time in offensive security, creativity, and proper research is needed to find a suitable method of penetrating a system. No implementation is the same and as such, it should be expected that each system has different methods of or mitigation towards intrusion.</p>
+<p>Design thinking is one way of approaching the problem at hand and can be generally applied to the process of solving a given problem in a system. Using my work on Kioptrix3 I hope to show how I applied a Design Thinking style thought process to solving the issue of bypassing the login system on a system where I had no hints to produce the username/password.</p>
+<p><img src="/securityportfolio/images/week3/k3-1.png" alt><br>As I had a defined problem I had not figure out how to solve it, the most obvious solution was to find the login, doing so would allow me to log in and further penetrate the system, however, there were no files or scripts running that stored the user’s login information within and therefore that solution was not possible. The next idea was to try some form of SQL injection, meaning I could skip finding the username/password and bypass the login by manipulating how the system handled database queries, there are a number of ways this can be done in a login prompt so I used some of the simple injection methods to get through, on testing these did not work so I had to try with another method. The method that worked was found through using provided resources to gain connection directly to the server’s web shell, allowing me to navigate the system freely without logging in, it was not the simplest solution and took me a few tests to get it working, but I successfully solved that problem within the system.</p>
+<p><img src="/securityportfolio/images/week3/k3-2.png" alt><br><img src="/securityportfolio/images/week3/k3-3.png" alt><br>I don’t believe design thinking or systems thinking were big influencers on my work, but their process was natural to the solving of problems within any system, being supplementary to the overall goal of any vulnerable machine.</p>
+<p>Just to mention, but of course design thinking was used in developing this website and solving the issues with setting it up and migrating it between platforms, but that is external to the overall goal of the studio and is detailed in the week 1 and week 2 blog posts so I only see worth in mentioning it rather than detailing it explicitly.</p>
+<h4 id="3-Apply-technical-skills-to-develop-model-and-or-evaluate-designs"><a href="#3-Apply-technical-skills-to-develop-model-and-or-evaluate-designs" class="headerlink" title="3. Apply technical skills to develop, model and/or evaluate designs"></a>3. Apply technical skills to develop, model and/or evaluate designs</h4><p>Starting with no prior experience, in the course of four weeks I built a foundation of offensive security skills and was able to obtain root access on six vulnerable machines:</p>
+<ul>
+<li>Web for Pentester</li>
+<li>Deloittes Piper</li>
+<li>Kioptrix1</li>
+<li>Kioptrix3</li>
+<li>PwnLab:init</li>
+<li>Curling<br>Using my understanding of computer systems, vulnerabilities, research materials and provided tools I was able to evaluate systems for their flaws and solve the challenge set for each system. I used a standard process for the infiltration of each system, starting from analysing and enumerating the system for its points of access, followed by researching the potential ways I could take advantage of an entry point to escalate myself within the system followed by executing the attacks I thought might work and repeating the process. While this is a simplification of the process, it roughly describes how I, or any attacker, should escalate within a system.</li>
+</ul>
+<p><img src="/securityportfolio/images/week2/nmap.png" alt="Enumerate the system)"><br><img src="/securityportfolio/images/week2/cve.png" alt="Research infiltration methods"><br><img src="/securityportfolio/images/week2/compile.png" alt="Execute attack"><br><img src="/securityportfolio/images/week2/passwd.png" alt="Escalate privilege"><br>I used a good variety of tools, with each serving a particular purpose in executing my attack, whether it be nmap or dirbuster for the sake of enumerating a system, or Metasploit and ExploitDB to find exploits, I needed to learn and use a handful of programs, resources and packages to automate and assist me in gaining access to vulnerable machines.</p>
+<p>Is my knowledge extensive, of course not, but I have built the fundamentals for working professionally in similar environments. Like anything, achieving good technical skills in security requires a solid understanding and a particular way of thinking, I’ve fostered this way of thinking about problems and experienced a good variety of situations to best characterise the types of vulnerabilities a system might have.</p>
+<h4 id="4-Demonstrate-effective-collaboration-and-communication-skills"><a href="#4-Demonstrate-effective-collaboration-and-communication-skills" class="headerlink" title="4. Demonstrate effective collaboration and communication skills"></a>4. Demonstrate effective collaboration and communication skills</h4><p>A consistent deliverable in all of the weeks was some level of presentation, meaning for students to present some form of findings in an understandable sense to students and staff of varying skill levels, I presented on a couple of topics, the BEEF tool, Flash vulnerabilities, and the open-day presentations. I would say I presented anywhere between well and adequately in my presentations, suffering slightly from timing restraints and not explaining in a business friendly manner. These tasks were mostly collaborative, working in groups of four to produce and present the work, I worked well with my group as we were familiar with each other, so I had no issues in that regard.</p>
+<p>Sprint reflections within the student group and free-for-alls were an important part in gauging participation and progress among the student group, not really for the staff, but for the students. The reflections were slow due to most not holding to the timing requirements, but allowed everyone to understand each other’s progress together, by comparison, the free-for-alls were much better for in-depth discussion but did not provide the class-wide understanding.</p>
+<p><img src="/securityportfolio/images/week2/notes.png" alt><br>I worked considerably with other students to help solve problems or roadblocks found when completing vulnerable machines, more experienced students were a great help in showing new resources, some were tools, like CyberChef, while others were commands and options which I used a lot in enumerating systems, such as sudo -l.</p>
+<h4 id="5-Conduct-critical-self-peer-and-group-review-and-performance-evaluation"><a href="#5-Conduct-critical-self-peer-and-group-review-and-performance-evaluation" class="headerlink" title="5. Conduct critical self, peer and group review and performance evaluation"></a>5. Conduct critical self, peer and group review and performance evaluation</h4><p>I feel pretty good about everything at the end of the studio, I’ve mentioned this before, but I feel my goal was achieved early into the studio and my pace was incredibly fast, but I slowed down a lot after that as I tried more challenging things to further my learning. Also mentioned, but I felt very nervous starting the studio and was extremely pressured for at least the first two weeks, looking back at that I am now more comfortable with my work and rather proud of what I achieved.</p>
+<p>I haven’t the slightest reasonable complaint about anyone from the studio, staff, students or guests, they were all extremely accommodating and helpful. Some of the people who started at similar levels to me showed much more competence than I have, maybe because they focused on different aspects or challenges than I did. There are plenty of students in the studio there were a few students I did not speak with, this is my fault and the only times I could see their progress was during the sprint reflections at the end of the week.</p>
+<p>The course itself was interesting and fun, it didn’t suit the design of the summer studio fully and suffered only the slightest from not properly explained deliverables, but these were rectified through discussion and evaluation of the contents over the course of each sprint, so that was normal and to be expected.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>What have I learned? Coming into this course I was rushed, unprepared and nervous beyond belief, I was trying to keep myself above the abundant amounts of content provided and fulfill the high standard I had set for myself. Did I achieve this? Undoubtedly, my goal at the beginning was not complex, I just wanted to try and get all the way into a system, I found within the first two weeks that doing so wasn’t nearly as difficult as I had envisioned it to be and quickly achieved my goal. I learned a lot, and after completing my goal I continued to learn, in less of a frenzy than before, I picked up a few new skills during this time and tried a few things that might have been a touch too difficult for me, but regardless I think I learned from them.</p>
+<p>I don’t think I pushed myself nearly as hard as I could have, but I set a realistic goal and worked hard to get it done, I plan to work further on this in the long term and the push to learn this much as quick as I can has given me more momentum than I could have had any other way. What was most important to this was probably the large number of people who wholeheartedly wanted to help and shared their insights, methods, and knowledge with me, its been great.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://riley-oconnor-uts.github.io/securityportfolio/2019/03/03/Reflection/" data-id="cjsst1dko0001aqalu9vy8sne" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/securityportfolio/tags/Reflection/">Reflection</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-w4ref" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/securityportfolio/2019/03/02/w4ref/" class="article-date">
+  <time datetime="2019-03-01T20:37:23.000Z" itemprop="datePublished">2019-03-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/securityportfolio/2019/03/02/w4ref/">Week 4 Reflection</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>As the fourth week of the summer studio (25/2/19 - 3/3/19) this post and its accompanying post cover the work of the final deliverables, the contents of this post will likely be much shorter than the previous three posts on account of the contents being split between this post, a final reflection post on the studio and a formal report document (which will be detailed further).</p>
+<p>Because it was the final week, the work we delivered should reflect the work we have put in over the course of the month and present a final product as tangible evidence of our efforts. To give a proof that was consistent between all of the students it was requested that we each produce a report on the breaking into a standard machine, starting from boot, with the ultimate goal being to obtain root access on the machine. The machines used for this were suggested to be from the active Hack the Box resources to remove the ability to use guides and as many hints as possible, this replicated, mostly, the experience of breaking into a real-world machine.</p>
+<p>Further, an open-day was held on Friday of the fourth week (1/3/19) to showcase the work studio members produced during the month to interested parties, professionals, staff, and other students. This served as a wrap-up celebration for the studio and to promote the work that was put in. Students from all of the different studio topics hosted presentations and displays of their work in the designated rooms for their topic, allowing for anyone to roam between the different areas.</p>
+<h2 id="Reverse-Engineering-Exercises"><a href="#Reverse-Engineering-Exercises" class="headerlink" title="Reverse Engineering Exercises"></a>Reverse Engineering Exercises</h2><p>A series of reverse engineering challenges were provided to us on Monday by Ruben, who presented on the topic that day. Of all the contents over the past four weeks, I would claim that this one had the highest learning curve and was the most difficult to understand. There were four challenges provided of increasing difficulty, I completed three of the challenges, but will only be detailing two of them to completion because I forgot to take notes on how to complete the third and could not replicate my steps. The resource hosting the challenges is at <a href="http://uts-cs.securitygrounds.org/reverse-engineering/0x00/index.html" target="_blank" rel="noopener">http://uts-cs.securitygrounds.org/reverse-engineering/0x00/index.html</a>.</p>
+<h4 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h4><p>This was the first reverse engineering challenge I ever attempted, it was easy to understand at a basic level. When the script provided was run it would output the following:</p>
+<p><img src="/securityportfolio/images/week4/re1output.png" alt><br>This wasn’t all too helpful in finding the flag that existed somewhere in the program but using Binary Ninja you could see the space in the memory this ASCII image was stored using Binary Ninja.</p>
+<p><img src="/securityportfolio/images/week4/re1memorylincoln.png" alt><br>Binary Ninja allows for the traversal of program memory, looking through the list of functions I found the main function, which calls function1. In function1 it can be seen that there is an iterating loop that ends at the value 0x4, being iterated 0x1 every loop, and then calls function2.</p>
+<p><img src="/securityportfolio/images/week4/re1callfunction.png" alt><br>Function2 is the final function and stores a string value, identifiable by the 0x0 byte at the end, once the hex is converted to character constant the flag string is revealed.</p>
+<p><img src="/securityportfolio/images/week4/re1flag.png" alt><br>This challenge was simple and served to familiarise me with the layout and navigation of functions and memory.</p>
+<h4 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h4><p>This challenge was a step up from the previous and required some trial and error to solve. There was no hint in the output of the file, but the title of the file hinted at the use of some variety of crypto technique in the process.<br><img src="/securityportfolio/images/week4/re2output.png" alt></p>
+<p>Similarly to the previous challenge, I went straight to the main function, there was a string value, however, its output was not in ASCII, instead storing hex values and therefore not providing the proper flag yet.<br><img src="/securityportfolio/images/week4/re2cryptostring.png" alt></p>
+<p>Further into the function, it can be seen that each character in the string value is XORed with the value “45” to produce the output since XOR is reversible inputting the same value a second time would produce the proper flag.<br><img src="/securityportfolio/images/week4/re2xorloop.png" alt></p>
+<p>Some confusion came when attempting to XOR the string, using CyberChef I converted the string from hex and XORed using the key 0x45, however, the output did not come out in a human-readable way. After some testing, I figured the output was reversed in some way. If the input was entered per-line of the string value in reverse the output resulted in the flag.<br><img src="/securityportfolio/images/week4/re2flag.png" alt></p>
+<h4 id="0x03"><a href="#0x03" class="headerlink" title="0x03"></a>0x03</h4><p>By far the most challenging of the programs I accessed. When run the program would output an application menu asking for an option, regardless of the option entered it would return a string stating a Meterpreter session had been opened.</p>
+<p><img src="/securityportfolio/images/week4/re3output.png" alt><br>Looking at the program in Binary Ninja it could be seen that the application menu was taking and processing an input, the function that caught my eye was the decrypt_flag function, which was storing and moving a secret number value. Using gdb you could manipulate the function to produce the secret number value, which, once entered into the program, would spit out an encrypted version of the flag. I was not able to reproduce this.</p>
+<p><img src="/securityportfolio/images/week4/re3flag.png" alt><br>I did the third challenge with David, he was much better at understanding what was going on in the programs and his knowledge of C was the main point in obtaining the flag in the third challenge, I mostly offered cursory things, offering ideas and pointing out locations of different things.</p>
+<p></p><h3>Learning</h3><br>Reverse engineering is really hard and requires a lot of knowledge of the fundamentals of any programming language and assembly, even though these were basic challenges they were very difficult for me to complete, even with the help of people who knew the C language. Even if this isn’t something I see myself doing I found the knowledge regarding assembly to be not only interesting but also useful in the understanding of a program. I don’t see myself doing something like this often, but it is worthwhile to have the experience and keep it at the back of my mind.<p></p>
+<h2 id="Vulnerable-Machine"><a href="#Vulnerable-Machine" class="headerlink" title="Vulnerable Machine"></a>Vulnerable Machine</h2><p>I’ll just note some of my experiences with doing the vulnerable machine without noting any of the specifics as to how I obtained the flags or the commands I used. I obtained the user and root flags for the Hack the Box machine titled Curling, finding the solution took a fair while and, as with many things, seemed easy in retrospect despite the large amount of difficulty I had. I learned a few new things doing this machine, which should be noted in my report.</p>
+<p>I chose to do Curling based on its difficulty score (easy) and the fact not many other people seemed to be doing it, I want to do a more challenging machine, but I am leaving that for my own spare time, without any constraints.<br><img src="/securityportfolio/images/week4/curlingown.png" alt></p>
+<h2 id="Open-day"><a href="#Open-day" class="headerlink" title="Open-day"></a>Open-day</h2><p>Friday (1/3/19) was the final day of the summer studio classes and served as a display of all the effort students had put in since the beginning of the month, there were a wide variety of subjects being presented on across different rooms in Building 11 of UTS starting at 1pm. I arrived at 10am to organise with my group and hang around to see what everyone had planned for the presentation time.</p>
+<p>My group planned to present using a demo of the Deloittes box and show the functionality of BEEF, basically show some of the simpler things we had occupied ourselves with over the past four weeks. The range of topics we could show was rather limited because of the disclosure agreements that we had to abide by, limiting us from talking about Hack the Box boxes or the real-world pen-test. I had wanted to have slides, but doing so would mean we couldn’t show the demo without taking up too much time.</p>
+<p>We set up in a corner of the room early in the day and had a bit of difficulty setting up the BEEF demo because Nick arrived barely before 1pm, causing the BEEF demo to be set up soon after 1:30pm. Everyone, from every group, was extremely energetic setting up and presenting, the mood was kept high, there was a mix between business style presentations and demos of boxes or tools. It was strange setting up as, though it felt very busy it was at the same time relaxed in some way.</p>
+<p>I really enjoyed the day, just as an opportunity to just relax and keep a good mood, but we didn’t stay very long and only presented a couple of times on account of some group members wanting to leave well in advance.</p>
+<p><img src="/securityportfolio/images/week4/sydney.jpg" alt></p>
+<h2 id="Final-Thoughts"><a href="#Final-Thoughts" class="headerlink" title="Final Thoughts"></a>Final Thoughts</h2><p>It really has been a great experience to try all of these new things that I have never known to try, UTS just doesn’t offer subjects on the offensive security type subjects to the kind of practical level that the summer studio has. I know Darsh, Jai, Larry and Luke all put a lot of work into making this subject work and develop it and the experience has provided me an array of new skills and knowledge that I hope to develop some time in the future.</p>
+<p>As for where to go from here, I plan to learn more in the future as a hobby endeavour starting with completing more active boxes, I don’t intend to go to B-Sides this year, but some time in the future I would like to indulge and participate in similar events for the sake of my own curiousity.</p>
+<p>Basically, its been a whole lot of fun, I have learned far more than I had expected, achieved more than I had thought I would and want to keep trying.</p>
+<p>Thanks.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://riley-oconnor-uts.github.io/securityportfolio/2019/03/02/w4ref/" data-id="cjsst1dmq0006aqalnkymyvns" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/securityportfolio/tags/Week4/">Week4</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-w3ref" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/securityportfolio/2019/02/23/w3ref/" class="article-date">
@@ -142,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://riley-oconnor-uts.github.io/securityportfolio/2019/02/23/w3ref/" data-id="cjsiowuvi000485altelwoi3y" class="article-share-link">Share</a>
+      <a data-url="https://riley-oconnor-uts.github.io/securityportfolio/2019/02/23/w3ref/" data-id="cjsst1dmj0005aqalzomosebc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/securityportfolio/tags/Week3/">Week3</a></li></ul>
@@ -236,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://riley-oconnor-uts.github.io/securityportfolio/2019/02/17/w2ref/" data-id="cjsiowuuw000285alpxwk8fek" class="article-share-link">Share</a>
+      <a data-url="https://riley-oconnor-uts.github.io/securityportfolio/2019/02/17/w2ref/" data-id="cjsst1dma0004aqali59xgwdz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/securityportfolio/tags/Week2/">Week2</a></li></ul>
@@ -324,7 +456,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://riley-oconnor-uts.github.io/securityportfolio/2019/02/10/w1ref/" data-id="cjsiowuua000185almd248avl" class="article-share-link">Share</a>
+      <a data-url="https://riley-oconnor-uts.github.io/securityportfolio/2019/02/10/w1ref/" data-id="cjsst1dll0002aqalb7jgb2l7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/securityportfolio/tags/Week1/">Week1</a></li></ul>
@@ -349,7 +481,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/securityportfolio/tags/Week1/">Week1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/securityportfolio/tags/Week2/">Week2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/securityportfolio/tags/Week3/">Week3</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/securityportfolio/tags/Reflection/">Reflection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/securityportfolio/tags/Week1/">Week1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/securityportfolio/tags/Week2/">Week2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/securityportfolio/tags/Week3/">Week3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/securityportfolio/tags/Week4/">Week4</a></li></ul>
     </div>
   </div>
 
@@ -359,7 +491,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/securityportfolio/tags/Week1/" style="font-size: 10px;">Week1</a> <a href="/securityportfolio/tags/Week2/" style="font-size: 10px;">Week2</a> <a href="/securityportfolio/tags/Week3/" style="font-size: 10px;">Week3</a>
+      <a href="/securityportfolio/tags/Reflection/" style="font-size: 10px;">Reflection</a> <a href="/securityportfolio/tags/Week1/" style="font-size: 10px;">Week1</a> <a href="/securityportfolio/tags/Week2/" style="font-size: 10px;">Week2</a> <a href="/securityportfolio/tags/Week3/" style="font-size: 10px;">Week3</a> <a href="/securityportfolio/tags/Week4/" style="font-size: 10px;">Week4</a>
     </div>
   </div>
 
@@ -368,7 +500,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/securityportfolio/archives/2019/02/">February 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/securityportfolio/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/securityportfolio/archives/2019/02/">February 2019</a></li></ul>
     </div>
   </div>
 
@@ -379,6 +511,14 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/securityportfolio/2019/03/03/Reflection/">Reflection</a>
+          </li>
+        
+          <li>
+            <a href="/securityportfolio/2019/03/02/w4ref/">Week 4 Reflection</a>
+          </li>
         
           <li>
             <a href="/securityportfolio/2019/02/23/w3ref/">Week 3 Reflection</a>
